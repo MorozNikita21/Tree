@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of elements and keys in the tree: ");
+        int n = sc.nextInt();
+        BinaryTree bt = new BinaryTree();
+        for (int i = 0; i < n;i++){
+            System.out.println("Enter the key value: ");
+            int x = sc.nextInt();
+            System.out.println("Enter the name of the element: ");
+            String y = sc.next();
+            bt.addNode(x,y);
+        }
+        System.out.println("The key of the new element: ");
+        int x = sc.nextInt();
+        System.out.println("Name of the new element: ");
+        String y = sc.next();
+        bt.addNode(x,y);
+        System.out.println("Enter the key of the item you want to delete: ");
+        int z = sc.nextInt();
+        bt.remove(z);
+        bt.inOrderTraverseTree(bt.root);
+        System.out.println("Enter the key value of the item you want to find: ");
+        int zxc = sc.nextInt();
+        bt.findNode(zxc);
+    }
+}
